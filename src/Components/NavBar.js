@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <div style={styles.navWrapper}>
       {/* Logo */}
-      <div>Logo</div>
+      <div style={styles.logoText}>Logo</div>
       {/* In-line nav bar */}
       <div style={styles.navList}>
         {
@@ -42,6 +42,10 @@ const styles = {
   },
   selectedNavItem: {
     textDecoration: 'underline',
+  },
+  logoText: {
+    fontSize: '28px',
+    fontWeight: 'bold',
   }
 };
 
