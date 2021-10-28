@@ -2,8 +2,8 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 //Main-Screen
-import Landing
- from './Components/Landing';
+import Landing from './Landing';
+
 const App = () => {
   return (
     <Landing />

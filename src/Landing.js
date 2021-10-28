@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Components
-import NavBar from './NavBar';
+import NavBar from './Components/NavBar';
 
 const Landing = () => {
   return (
