@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
-  const navDefaults = ["Home", "About", "Portfolio", "Contact"];
+  const navDefaults = [
+    {name: "Home", link: "/"}, 
+    {name: "About", link: "/about"}, 
+    {name: "Registration", link: "/registration"}];
   const [hoveredNavItem, setHoveredNavItem] = useState('');
 
   return (
@@ -13,12 +17,12 @@ const NavBar = () => {
       <div style={styles.navList}>
         {
           navDefaults.map(currentItem => <div
-            onMouseEnter={() => setHoveredNavItem(currentItem)}
+            onMouseEnter={() => setHoveredNavItem(currentItem.name)}
             onMouseLeave={() => setHoveredNavItem("")}
-            style={hoveredNavItem === currentItem ? styles.selectedNavItem : null}
-            key={currentItem}
+            style={hoveredNavItem === currentItem.name ? styles.selectedNavItem : styles.unselectedNavItem}
+            key={currentItem.name}
           >
-              {currentItem}
+              <Link to={currentItem.link}>{currentItem.name}</Link>
             </div>)
         }
       </div>
@@ -46,6 +50,9 @@ const styles = {
   logoText: {
     fontSize: '28px',
     fontWeight: 'bold',
+  },
+  unselectedNavItem: {
+    textDecoration: 'none',
   }
 };
 
