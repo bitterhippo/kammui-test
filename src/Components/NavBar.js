@@ -19,10 +19,11 @@ const NavBar = () => {
           navDefaults.map(currentItem => <div
             onMouseEnter={() => setHoveredNavItem(currentItem.name)}
             onMouseLeave={() => setHoveredNavItem("")}
-            style={hoveredNavItem === currentItem.name ? styles.selectedNavItem : styles.unselectedNavItem}
             key={currentItem.name}
           >
-              <Link to={currentItem.link}>{currentItem.name}</Link>
+              <Link 
+              style={hoveredNavItem === currentItem.name ? styles.selectedNavItem : styles.unselectedNavItem}
+              to={currentItem.link}>{currentItem.name}</Link>
             </div>)
         }
       </div>
@@ -46,6 +47,7 @@ const styles = {
   },
   selectedNavItem: {
     textDecoration: 'underline',
+    color: 'black',
   },
   logoText: {
     fontSize: '28px',
@@ -53,6 +55,7 @@ const styles = {
   },
   unselectedNavItem: {
     textDecoration: 'none',
+    color: 'black'
   }
 };
 
