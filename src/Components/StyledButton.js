@@ -2,7 +2,9 @@ import React from 'react';
 
 const StyledButton = ({ text, top }) => {
   return (
-    <button style={styles.button}>{text}</button>
+    <div style={styles.buttonWrapper}>
+      <button style={styles.button}>{text}</button>
+    </div>
   )
 };
 
@@ -14,7 +16,8 @@ const styles = {
     color: 'white',
     border: 'none',
     fontWeight: 'bold',
-    fontSize: '18px'
+    fontSize: '18px',
+    borderRadius: '5px'
   }
 };
 
