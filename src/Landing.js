@@ -20,8 +20,8 @@ const Landing = () => {
   return (
     <div style={styles.mainWrapper}>
       <Router>
-        <NavBar ></NavBar>
-        <BackgroundImage />
+      <BackgroundImage />
+        <NavBar />
         {/* pages need to be added here */}
         <Switch>
           <Route component={Home} exact path="/" />
@@ -34,6 +34,7 @@ const Landing = () => {
 };
 
 const styles = {
+  mainWrapper: {}
 };  
 
 export default Landing;

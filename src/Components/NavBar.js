@@ -35,7 +35,8 @@ const styles = {
   navWrapper: {
     display: 'flex',
     width: '80%',
-    margin: '20px auto 0 auto',
+    paddingTop: '20px',
+    margin: '0 auto 0 auto',
     flexDirection: 'inline-row',
     justifyContent: 'space-between',
   },
@@ -47,15 +48,16 @@ const styles = {
   },
   selectedNavItem: {
     textDecoration: 'underline',
-    color: 'black',
+    color: 'white',
   },
   logoText: {
     fontSize: '28px',
     fontWeight: 'bold',
+    color: 'white',
   },
   unselectedNavItem: {
     textDecoration: 'none',
-    color: 'black'
+    color: '#DCDCDC'
   }
 };
 

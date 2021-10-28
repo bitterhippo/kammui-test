@@ -19,10 +19,12 @@ const BackgroundImage = ({ brightness }) => {
 const styles = {
   img: {
     width: '100%',
-    height: '30vh',
+    height: '100%',
     objectFit: 'cover',
     overflow: 'hidden',
-    filter: 'brightness(100%)',
+    filter: 'brightness(70%)',
+    zIndex: -1,
+    position: 'absolute'
   }
 }
 
