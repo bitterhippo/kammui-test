@@ -1,11 +1,16 @@
 import React from 'react';
 
+//Components
+import StyledButton from '../Components/StyledButton';
+
 const Home = () => {
   return (
     <div style={styles.contentWrapper}>
-      <span style={styles.bigText}>Kammui</span>
-      <br />
-      <span style={styles.smallText}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Ipsum.</span>
+      <div style={styles.bigText}>Kammui</div>
+      <div style={styles.smallText}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Ipsum.</div>
+      <StyledButton
+      text="Sign up"
+      />
     </div>
   )
 };
@@ -15,7 +20,7 @@ const styles = {
     marginTop: '15%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    width: '80%',
+    width: '60%',
     textAlign: 'center'
   },
   bigText: {
@@ -24,8 +29,10 @@ const styles = {
     color: 'white'
   },
   smallText: {
-    fontSize: '32px',
-    color: 'white'
+    marginTop: '20px',
+    fontSize: '28px',
+    color: '#DCDCDC',
+    marginBottom: '20px'
   }
 }
 

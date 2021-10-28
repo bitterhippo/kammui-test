@@ -22,7 +22,7 @@ const styles = {
     height: '100%',
     objectFit: 'cover',
     overflow: 'hidden',
-    filter: 'brightness(70%)',
+    filter: 'brightness(50%)',
     zIndex: -1,
     position: 'absolute'
   }
