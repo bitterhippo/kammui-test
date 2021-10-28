@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const NavBar = () => {
 
   const navDefaults = ["Home", "About", "Portfolio", "Contact"];
+  const [hoveredNavItem, setHoveredNavItem] = useState('');
 
   return (
     <div style={styles.navWrapper}>
@@ -11,7 +12,12 @@ const NavBar = () => {
       {/* In-line nav bar */}
       <div style={styles.navList}>
         {
-          navDefaults.map(currentItem => <div>
+          navDefaults.map(currentItem => <div
+            onMouseEnter={() => setHoveredNavItem(currentItem)}
+            onMouseLeave={() => setHoveredNavItem("")}
+            style={hoveredNavItem === currentItem ? styles.selectedNavItem : null}
+            key={currentItem}
+          >
               {currentItem}
             </div>)
         }
@@ -31,8 +37,11 @@ const styles = {
   navList: {
     display: 'flex',
     flexDirection: 'inline-row',
-    gap: '10px',
+    gap: '20px',
     fontSize: '28px'
+  },
+  selectedNavItem: {
+    textDecoration: 'underline',
   }
 };
 
