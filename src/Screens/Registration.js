@@ -33,10 +33,10 @@ const Registration = () => {
 const styles = {
   formWrapper: {
     margin: "15% auto 0 auto",
-    backgroundColor: "#000080",
+    backgroundColor: "#263238",
     width: '40%',
     maxWidth: '390px',
-    borderRaidus: '15'
+    borderRadius: '15px'
   },
   form: {
     paddingTop: '20px',

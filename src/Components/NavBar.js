@@ -43,7 +43,7 @@ const styles = {
   navList: {
     display: 'flex',
     flexDirection: 'inline-row',
-    gap: '20px',
+    gap: '35px',
     fontSize: '28px'
   },
   selectedNavItem: {
