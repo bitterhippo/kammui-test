@@ -21,9 +21,9 @@ const Landing = () => {
         <NavBar ></NavBar>
         {/* pages need to be added here */}
         <Switch>
-          <Route exact component={Home} pattern="/" />
-          <Route exact component={About} pattern="/about" />
-          <Route exact component={Registration} pattern="/registration" />
+          <Route component={Home} exact path="/" />
+          <Route component={About} exact path="/about" />
+          <Route component={Registration} exact path="/registration" />
         </Switch>
       </ Router>
     </div>
