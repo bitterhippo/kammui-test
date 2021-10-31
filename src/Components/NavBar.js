@@ -7,6 +7,7 @@ const NavBar = () => {
     {name: "Home", link: "/"}, 
     {name: "About", link: "/about"}, 
     {name: "Registration", link: "/registration"}];
+
   const [hoveredNavItem, setHoveredNavItem] = useState('');
 
   return (
@@ -22,8 +23,11 @@ const NavBar = () => {
             key={currentItem.name}
           >
               <Link 
-              style={hoveredNavItem === currentItem.name ? styles.selectedNavItem : styles.unselectedNavItem}
-              to={currentItem.link}>{currentItem.name}</Link>
+              style={hoveredNavItem === currentItem.name 
+                ? styles.selectedNavItem 
+                : styles.unselectedNavItem}
+              to={currentItem.link}>{currentItem.name}
+              </Link>
             </div>)
         }
       </div>

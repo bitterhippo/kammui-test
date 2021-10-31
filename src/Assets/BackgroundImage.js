@@ -7,8 +7,6 @@ const BackgroundImage = ({ brightness }) => {
     Background: KammuiBackground
   };
 
-  console.log(imgConnector)
-
   return (
     <img
       style={styles.img}

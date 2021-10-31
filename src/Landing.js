@@ -13,7 +13,6 @@ import About from './Screens/About';
 
 //Components
 import NavBar from './Components/NavBar';
-import BackgroundImage from './Assets/BackgroundImage';
 const LazyBackground = React.lazy(() => import("./Assets/BackgroundImage"));
 
 const Landing = () => {
